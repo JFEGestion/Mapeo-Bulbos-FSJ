@@ -16,7 +16,7 @@ st.title("❄️ Mapeo Bulbos FSJ ❄️")
 st.markdown(""" Los Latidos Representan a Los Pallets Duplicados """)
 
 # Cargar y procesar datos de Excel
-@st.cache_data
+@st.cache_data(ttl=60)
 def load_data():
     try:
         df = pd.read_excel('MAPEO BULBOS.xlsx')
